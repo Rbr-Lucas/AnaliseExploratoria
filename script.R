@@ -29,11 +29,11 @@ histIdade = base |>
   geom_histogram(fill = 'lightblue') +
   theme_minimal() +
   labs(
-    title = 'Distribuição da idade dos entrevistados.',
+    title = 'Distribuição da idade dos entrevistados',
     x = 'Idade',
     y = 'Quantidade'
   )
-ggsave('./histIdade.pdf', plot = histIdade)
+ggsave('./histIdade.png', plot = histIdade)
 
 
 boxTempo = base |>
@@ -45,7 +45,7 @@ boxTempo = base |>
     x = '',
     y = 'Tempo preso'
   )
-ggsave('./boxTempo.pdf', plot = boxTempo)
+ggsave('./boxTempo.png', plot = boxTempo)
 
 
 boxScore = base |>
@@ -58,17 +58,22 @@ boxScore = base |>
     x = '',
     y = 'Score de Periculosidade'
   )
-ggsave('./boxScore.pdf', plot = boxScore)
+ggsave('./boxScore.png', plot = boxScore)
 
 
 plotReincidencia = base |>
   ggplot(aes(x = reincidente)) +
   geom_bar() +
   theme_minimal() +
+  geom_text(
+    stat = "count",
+    aes(label = after_stat(count)),
+    vjust = -0.3
+  ) +
   labs(
     title = 'Distribuição da variável reincidente',
     x = 'Reincidência',
     y = 'Quantidade'
   )
-ggsave('./plotReincidencia.pdf', plot = plotReincidencia)
+ggsave('./plotReincidencia.png', plot = plotReincidencia)
 
