@@ -2,6 +2,7 @@
 
 Repositório criado para a disciplina de Prática 2.
 
+# Invetigação inicial
 Ao realizar uma breve análise sobre o conjunto de dados, podemos observar que:
 \
 \
@@ -16,3 +17,9 @@ A seguir podemos verificar que o score de periculosidade tende a diminuir leveme
 \
 O plot abaixo evidencia que o número de presidiários não reincidentes é 4x maior que os reincidentes.
 ![Distribuição da variável reincidente](plotReincidencia.png)
+
+
+# Análise Exploratória
+Pudemos verificar que o **score de periculosidade** apresenta uma média e mediana de **174 e 177 meses**, respectivamente e aproximadamente.
+\
+[CONTINUAR]
